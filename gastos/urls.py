@@ -1,8 +1,11 @@
 from django.urls import path
+from django.contrib import admin
+admin.autodiscover()
 
 from . import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('agregar_usuario', views.agregar_usuario, name='agregar_usuario'),
     path('obtener_usuario', views.obtener_usuario, name='obtener_usuario'),

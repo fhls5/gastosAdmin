@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+#Create your views here.
 from django.http import HttpResponse
 from django.views.decorators.csrf import requires_csrf_token
 import json
@@ -8,6 +8,7 @@ from gastos.models import Usuario
 from gastos.models import Estado
 from gastos.models import Categorias
 from gastos.models import Gastos
+
 
 
 def index(request):
