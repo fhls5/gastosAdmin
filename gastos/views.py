@@ -75,6 +75,7 @@ def agregar_gasto(request):
     estado = Estado.objects.get(id=data.get("estado_id"))
 
     gasto = Gastos(monto=monto, fecha=fecha, categoria=categoria, usuario=usuario, estado=estado)
+    
     gasto.save()
 
     return HttpResponse("Se creo el Gasto")
